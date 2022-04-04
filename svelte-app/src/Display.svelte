@@ -28,7 +28,7 @@
 		grid-column-start: 1;
 		grid-column-end: 5;
 		background-color: #444;
-		color: white;
+		color: white; 
 		font-weight: 100;
 		text-align: right;
 		align-self: end;
