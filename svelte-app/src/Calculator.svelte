@@ -1,6 +1,7 @@
 <script>
 	import Calcbtn from './Calcbtn.svelte'
 	import Display from './Display.svelte'
+	export let calcFontSize = "16px"
 	const setOperColor = (event) => {
 		let selected = event.detail.symbol;
 		if (selected === "=")
@@ -11,7 +12,7 @@
 			if (opers[i].innerHTML === selected) {
 				opers[i].style.backgroundColor = "#c72";
 			}
-		} 
+		}
 	}
 	const setClear = (event) => {
 		let selected = event.detail.symbol;
@@ -20,8 +21,7 @@
 	}
 </script>
 
-<h1>Calculator</h1>
-<div class="calc">
+<div class="calc" style="--fontSize:{calcFontSize};">
 <Display />
 	<Calcbtn use="fn" on:func = {setOperColor} >AC</Calcbtn>
 	<Calcbtn use="plusminus"><sup>&plus;</sup>/<sub>&minus;</sub></Calcbtn>

@@ -12,7 +12,7 @@
 	const dispatch = createEventDispatcher();
 	
 	let calcClick = (a) => {
-		const btn = a.target.innerHTML; 
+		const btn = a.target.innerHTML;
 		if ("0" <= btn && btn <= "9") {
 			dispatch('ac', {
 				symbol: btn,
@@ -59,8 +59,8 @@
 				break
 		case "+":
 		case "":
-		case "ï¿½":
-		case "ï¿½":
+		case "×":
+		case "÷":
 		case "=":
 		dispatch('func', {
 			symbol: btn,
@@ -75,10 +75,10 @@
 					case "":
 						operand -= $display
 						break;
-					case "ï¿½":
+					case "×":
 						operand *= $display
 						break;
-					case "ï¿½":
+					case "÷":
 						operand /= $display
 						break;
 				}
