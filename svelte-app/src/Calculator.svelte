@@ -8,9 +8,9 @@
 			selected = "";
 		let opers = document.getElementsByClassName("oper");
 		for(var i = 0, length = opers.length; i < length; i++) {
-			opers[i].style.backgroundColor = "#F94";
+				opers[i].classList.remove("held")
 			if (opers[i].innerHTML === selected) {
-				opers[i].style.backgroundColor = "#c72";
+					opers[i].classList.add("held")
 			}
 		}
 	}
@@ -26,7 +26,7 @@
 	<Calcbtn use="fn" on:func = {setOperColor} >AC</Calcbtn>
 	<Calcbtn use="plusminus"><sup>&plus;</sup>/<sub>&minus;</sub></Calcbtn>
 	<Calcbtn use="fn">%</Calcbtn>
-	<Calcbtn use="oper" on:func = {setOperColor}>&div</Calcbtn>
+	<Calcbtn use="oper" on:func = {setOperColor}>&div;</Calcbtn>
 	<Calcbtn on:ac = {setClear}>7</Calcbtn>
 	<Calcbtn on:ac = {setClear}>8</Calcbtn>
 	<Calcbtn on:ac = {setClear}>9</Calcbtn>
@@ -38,7 +38,7 @@
 	<Calcbtn on:ac = {setClear}>1</Calcbtn>
 	<Calcbtn on:ac = {setClear}>2</Calcbtn>
 	<Calcbtn on:ac = {setClear}>3</Calcbtn>
-	<Calcbtn use="oper" on:func = {setOperColor}>&plus;</Calcbtn>
+	<Calcbtn use="oper" on:func = {setOperColor}>+</Calcbtn>
 	<Calcbtn width="twowide">0</Calcbtn>
 	<Calcbtn on:ac = {setClear}>.</Calcbtn>
 	<Calcbtn use="oper" on:func = {setOperColor}>=</Calcbtn>
